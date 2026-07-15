@@ -26,7 +26,7 @@ On the test set:
 Each active customer (anyone who hadn't already churned) was then scored with a predicted probability and assigned a risk tier:
 
 - 58% or higher: High risk
-- 300% to 57%: Medium risk
+- 30% to 57%: Medium risk
 - Below 30%: Low risk
 
 Revenue at risk for each customer was estimated as their monthly charge multiplied by their churn probability. The scored dataset was exported to `Telco_Risk_Predictions.csv`, which feeds the Power BI dashboard.
