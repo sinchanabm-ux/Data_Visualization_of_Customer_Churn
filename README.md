@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Customer Churn Analysis and Prediction using Power BI and Machine Learning
 
 This project looks at customer churn for a telecom company. The dataset was cleaned and transformed in Python, a logistic regression model was trained to estimate churn risk, and the results were brought into Power BI to build a dashboard that a business team could actually use.
@@ -67,3 +68,7 @@ Clone the repo, open the notebook if you want to see or rerun the modeling steps
 ## Takeaways
 
 Push customers off month-to-month contracts where possible, pay close attention to the first six months of a customer's lifecycle since that's where most churn happens, look into why fiber optic customers are unhappy, and encourage customers to adopt more services early since that seems to be one of the strongest things tying people to the company.
+=======
+# Data_Visualization_of_Customer_Churn
+A customer dataset was cleaned, transformed and used for analysis of chrun. Integrated with Machine Learning using python, further risk of customers churning was predicted. 
+>>>>>>> parent of 003be23 (.)
