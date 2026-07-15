@@ -4,13 +4,14 @@ This project looks at customer churn for a telecom company. The dataset was clea
 
 ## What's in this repo
 
-- `DVZ_RiskAssign.ipynb` - the notebook where data cleaning, model training, and churn risk scoring happens
-- `Customer_Churn_Analysis_and_Prediction_FINAL.pbix` - the Power BI file with the dashboard
-- `README.md` - this file
+- 'DVZ_RiskAssign.ipynb' - the notebook where data cleaning, model training, and churn risk scoring happens
+- 'Customer_Churn_Analysis_and_Prediction_FINAL.pbix' - the Power BI file with the dashboard
+- 'Model_train_ftr_imp.ipynb' - the notebook used to estimate feature importance for customer churn influence
+- 'README.md' - this file
 
 ## The dataset
 
-6,418 customer records with 32 columns covering demographics, the services each customer had signed up for, billing info, and whether they'd churned. A number of the service-related columns (Value Deal, Multiple Lines, Online Security, Streaming TV, and others) had missing values, mostly because those customers didn't have internet service to begin with. Those gaps were filled in as "No" rather than dropped.
+6,418 customer records with 32 columns covering demographics, the services each customer had signed up for, billing info, and whether they'd churned. A number of the service-related columns (Value Deal, Multiple Lines, Online Security, Streaming TV, and others) had missing values, mostly because those customers didn't have internet service to begin with. Those gaps were filled in as "NA" rather than dropped.
 
 Customer status originally had three values - Stayed, Joined, and Churned. For modeling, this was mapped down to a binary target where Stayed and Joined become 0 and Churned becomes 1. Churn Category and Churn Reason were dropped before modeling since they're only populated for customers who already churned and would leak the outcome.
 
@@ -20,16 +21,15 @@ A Logistic Regression classifier (saga solver, max_iter=5000) was trained on an 
 
 On the test set:
 
-- Accuracy: 0.80
-- ROC-AUC and a full confusion matrix are also printed in the notebook for a closer look at how the model performs across classes
+- Accuracy: 0.841900
 
 Each active customer (anyone who hadn't already churned) was then scored with a predicted probability and assigned a risk tier:
 
-- 70% or higher: High risk
-- 40% to 69%: Medium risk
-- Below 40%: Low risk
+- 58% or higher: High risk
+- 300% to 57%: Medium risk
+- Below 30%: Low risk
 
-Revenue at risk for each customer was estimated as their monthly charge multiplied by their churn probability. The scored dataset was exported to `Telco_Churn_Predictions.csv`, which feeds the Power BI dashboard.
+Revenue at risk for each customer was estimated as their monthly charge multiplied by their churn probability. The scored dataset was exported to `Telco_Risk_Predictions.csv`, which feeds the Power BI dashboard.
 
 The notebook also pulls out the model's coefficients to see which features push churn risk up the most. Total Revenue, Total Charges, and Total Long Distance Charges came out as the strongest drivers, followed by a few state and payment-method effects, contract-related flags, and service usage patterns like streaming and multiple lines.
 
