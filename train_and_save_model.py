@@ -20,7 +20,7 @@ from sklearn.linear_model import LogisticRegression
 # dataset/customer-churn-dataset.xlsx
 DATA_PATH = "dataset/customer-churn-dataset.xlsx"
 
-df = pd.read_excel(DATA_PATH)
+df = pd.read_excel(dataset\customer-churn-dataset.xlsx)
 
 # --- 2. Clean, same as your notebook -----------------------------------
 cols_to_fill = [
