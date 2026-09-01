@@ -37,11 +37,19 @@ The notebook also pulls out the model's coefficients to see which features push 
 
 The Power BI file has four pages.
 
+![Executive Overview](dashboard-pictures\executive-overview.png)
+
 **Executive Overview** - the top-level numbers: 6.42K total customers, 1.73K churned, 434 flagged high risk. Also shows churn rate trend over tenure, the breakdown of churn reasons (competitor, attitude, dissatisfaction, price, other), and a simple view of how many customers stayed, churned, or joined.
+
+![Customer Analysis](dashboard-pictures\customer-analysis.png)
 
 **Customer Analysis** - digs into who's churning. Breaks it down by internet type, payment method, and contract type, and includes a chart of which features mattered most to the model - total revenue, total charges, contract type, long distance charges, and monthly charges were the biggest drivers.
 
+![Churn Risk Prediction](dashboard-pictures\churn-risk-prediction.png)
+
 **Churn Risk Prediction** - this is where the model output lives. 434 high-risk customers, about $622.5K in revenue tied to them, and an average churn likelihood of 17%. It shows risk broken out by contract, how churn probability trends across tenure, and which internet service types carry the most risk (fiber optic customers stood out here).
+
+![Key Insights](dashboard-pictures\key-insights.png)
 
 **Key Insights** - a decomposition tree and a plain list of findings pulled from the analysis:
 
