@@ -5,6 +5,7 @@ This project looks at customer churn for a telecom company. The dataset was clea
 ## What's in this repo
 
 - 'DVZ_RiskAssign.ipynb' - the notebook where data cleaning, model training, and churn risk scoring happens
+- dataset - the Customer Churn dataset
 - 'Customer_Churn_Analysis_and_Prediction_FINAL.pbix' - the Power BI file with the dashboard
 - 'powerbi+ml' - the notebook used to estimate feature importance for customer churn influence
 - 'README.md' - this file
